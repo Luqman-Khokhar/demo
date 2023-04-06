@@ -10,6 +10,7 @@ const AppRoute = ({ component: Component, routeKey, blankLayout, ...props }) => 
 		const isBlank = blankLayout ? true : false
 		dispatch(onBlankLayout(isBlank))
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [blankLayout])
 	
 	return (

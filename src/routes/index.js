@@ -42,7 +42,7 @@ const Routes = () => {
 									{...route.meta} 
 								/>
 							}
-						/ >
+						/>
 					)
 				})}
 			</Route>

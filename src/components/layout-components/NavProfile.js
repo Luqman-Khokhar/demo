@@ -3,9 +3,6 @@ import { Menu, Dropdown, Avatar } from 'antd';
 import { useDispatch } from 'react-redux'
 import { 
 	EditOutlined, 
-	SettingOutlined, 
-	ShopOutlined, 
-	QuestionCircleOutlined, 
 	LogoutOutlined 
 } from '@ant-design/icons';
 import Icon from 'components/util-components/Icon';
@@ -47,18 +44,6 @@ export const NavProfile = () => {
 					{
 						key: 'Edit Profile',
 						label: <MenuItem path="/" label="Edit Profile" icon={EditOutlined} />,
-					},
-					{
-						key: 'Account Setting',
-						label: <MenuItem path="/" label="Account Setting" icon={SettingOutlined} />,
-					},
-					{
-						key: 'Account Billing',
-						label: <MenuItem path="/" label="Account Billing" icon={ShopOutlined} />,
-					},
-					{
-						key: 'Help Center',
-						label: <MenuItem path="/" label="Help Center" icon={QuestionCircleOutlined} />,
 					},
 					{
 						key: 'Sign Out',

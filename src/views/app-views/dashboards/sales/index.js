@@ -3,7 +3,7 @@ const SalesDashboard = () => {
 
 	return (
 		<>
-		<h1>SalesDashboard</h1>
+		<h1>Receipts</h1>
 		</>
 	)
 }

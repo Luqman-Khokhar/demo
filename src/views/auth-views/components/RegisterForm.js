@@ -7,10 +7,6 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion"
 
 
-
-
-            /*  ERROR MESSAGES  */    
-
 const rules = {
 	username: [
 		{ 
@@ -57,13 +53,13 @@ const rules = {
 
   
 
-             /* MAIN FUNCTION */
+            
 export const RegisterForm = (props) => {
 
 	const [isValid, setIsValid] = useState(false);
 
 
-          /*  PASSWORD VALIDATION*/
+    
 	const handlePasswordChange = (event) => {
 		const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?!.*[!\/\\]).{8,}$/;
 		const value = event.target.value;
@@ -73,7 +69,7 @@ export const RegisterForm = (props) => {
 
 
 
-      /*    USERNAME VALIDATION */
+
 	const handleUsernameChange = (event) => {
 		const regex = /^[a-zA-Z0-9_-]*$/;
 		const value = event.target.value;
@@ -85,12 +81,14 @@ export const RegisterForm = (props) => {
 
 
 
-	      /*  SIGN UP FETCHING */ 
+	      
 
 	const { signUp, showLoading, token, loading, redirect, message, showMessage, hideAuthMessage, allowRedirect = true } = props
 	const signUpUrl = `http://192.168.1.100:8000/api/users/add_user`
 	const method = "POST"
+	// eslint-disable-next-line no-unused-vars
 	const send_request = (values, url) => {
+        // eslint-disable-next-line no-unused-vars
         const response = fetch(url, {
 			method: method,
             body: JSON.stringify(values),
@@ -151,7 +149,7 @@ export const RegisterForm = (props) => {
 						{
 						  required: true,
 						  message: "Required"
-						},
+						}
 						/* {
 						  validator: (_, value) =>
 							value.includes(" ")
